@@ -194,25 +194,55 @@
                         				<div class="sidebar-card">
 
     <div class="sidebar-group">
-        <h4 class="sidebar-title">All Content</h4>
-        <ul class="sidebar-list">
-            <li class="active"><a href="#">All Content <span></span></a></li>
-            <li><a href="#">Our Articles <span></span></a></li>
-            <li><a href="https://www.linkedin.com/company/andersen-in-tanzania/">LinkedIn Posts <span></span></a></li>
-        </ul>
-    </div>
+    <h4 class="sidebar-title">All Content</h4>
+    <ul class="sidebar-list">
 
-    <div class="sidebar-group">
-        <h4 class="sidebar-title">By Topic</h4>
-        <ul class="sidebar-list">
-            <li><a href="#">Tax Updates <span></span></a></li>
-            <li><a href="#">Regulatory Changes <span></span></a></li>
-            <li><a href="#">Business Insights <span></span></a></li>
-            <li><a href="#">Firm's News <span></span></a></li>
-        </ul>
-    </div>
+        <li>
+            <a href="#" class="coming-link">All Content</a>
+            <div class="coming-text">Coming soon</div>
+        </li>
 
+        <li>
+            <a href="#" class="coming-link">Our Articles</a>
+            <div class="coming-text">Coming soon</div>
+        </li>
+
+        <li>
+            <a href="https://www.linkedin.com/company/andersen-in-tanzania/" target="_blank">
+                LinkedIn Posts
+            </a>
+        </li>
+
+    </ul>
 </div>
+
+<div class="sidebar-group">
+    <h4 class="sidebar-title">By Topic</h4>
+    <ul class="sidebar-list">
+
+        <li>
+            <a href="#" class="coming-link">Tax Updates</a>
+            <div class="coming-text">Coming soon</div>
+        </li>
+
+        <li>
+            <a href="#" class="coming-link">Regulatory Changes</a>
+            <div class="coming-text">Coming soon</div>
+        </li>
+
+        <li>
+            <a href="#" class="coming-link">Business Insights</a>
+            <div class="coming-text">Coming soon</div>
+        </li>
+
+        <li>
+            <a href="#" class="coming-link">Firm's News</a>
+            <div class="coming-text">Coming soon</div>
+        </li>
+
+    </ul>
+</div>
+
 
                         			</div>
                         			<div class="cell large-9">
@@ -702,5 +732,25 @@
         </script>
         <script src="https://15fdb71145.nxcli.io/assets/countries_dropdown/countries.js"></script>
         <script src="https://15fdb71145.nxcli.io/offices/reach-data"></script>
+<script>
+document.querySelectorAll('.coming-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const text = this.nextElementSibling;
+
+        // Hide all other "Coming soon"
+        document.querySelectorAll('.coming-text').forEach(t => {
+            if (t !== text) t.style.display = "none";
+        });
+
+        // Toggle this one
+        text.style.display =
+            text.style.display === "block" ? "none" : "block";
+    });
+});
+</script>
+
+			
     </body>
 </html>
