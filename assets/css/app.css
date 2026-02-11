@@ -686,6 +686,15 @@
 .sidebar-list li.active a span {
     color: #ffffff;
 }
+.coming-text {
+    display: none;
+    font-size: 13px;
+    color: #b30000;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+
 
 
 
