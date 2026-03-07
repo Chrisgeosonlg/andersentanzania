@@ -734,6 +734,21 @@
     font-weight:500;
 }
 
+.director{
+margin-bottom:25px;
+text-align:center;
+}
+
+.director img{
+width:100%;
+border-bottom:3px solid #c8102e;
+}
+
+.director-name{
+margin-top:10px;
+font-weight:500;
+}
+
 
 
 
